@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!-- <link href="https://fonts.googleapis.com/css?family=Muli%7CRoboto:400,300,500,700,900" rel="stylesheet"> -->
+      <link rel="shortcut icon" href="images/logo.png">
+      <link rel="stylesheet" href="styles.css">
+      <title>Final Touch Inquiry</title>
+  </head>
+  <body>
+    <header>
+      <h1>Final Touch Inquiry</h1>
+      <p>Calculate Gallons Needed</p>
+    </header>
+    <main>
+      <form>
+        <fieldset>
+          <legend>Paint Calculator</legend>
+          <hr>
+          <div class="label-input-container">
+            <Label for="fullname">Length of walls:</Label>
+            <input type="number" class="calc-input" id="wall-length" name="wall_length" placeholder="#" required><br>
+          </div>
+          <div class="label-input-container">
+            <Label for="fullname">Height of walls:</Label> 
+            <input type="number" id="wall-height" name="wall_length" placeholder="#" required><br>
+          </div>
+          <div class="label-input-container">
+            <Label for="fullname">Number of windows:</Label>
+            <input type="number" id="num-windows" name="wall_length" placeholder="#" required><br>
+          </div>
+          <div class="label-input-container">
+            <Label for="fullname">Number of doors:</Label>
+            <input type="number" id="num-doors" name="wall_length" placeholder="#" required><br>
+          </div>
+          <div class="label-input-container">
+            <Label for="fullname">Length of opening:</Label>
+            <input type="number" id="open-length" name="wall_length" placeholder="#" required><br>
+          </div>
+          <div class="label-input-container">
+            <Label for="fullname">Height of opening:</Label>
+            <input type="number" id="open-height" name="wall_length" placeholder="#" required><br>
+          </div>   
+          <div class="label-input-container">
+            <Label for="fullname">Coats of paint:</Label>
+            <input type="number" id="paint-coats" name="wall_length" placeholder="#" required><br>
+          </div>  
+        </fieldset>
+        <hr>
+        <h3>Total Gallons needed: </h3>
+        <span id="gal-calc">##</span>
+        <button type="submit">Submit</button>
+      </form>
+      
+    </main>
+    
+    <div class="stay-down-footer"></div>
+    <footer>
+      <address class="footer-address">
+        <a href="mailto:j.a.whitehead93@icloud.com">j.a.whitehead93@icloud.com</a><br>
+        <a href="tel:+16146783777">(614) 678-3777</a>
+      </address>
+      <a href="#"><img src="images/roller-diag.png" alt="Paint roller symbol"></a>
+      <p class="copyright"><em>&copy; James Whitehead</em></p>  
+    </footer>
+  </body>
+</html>

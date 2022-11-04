@@ -1,0 +1,189 @@
+/* ------------------- */
+/*-----Base Styles-----*/
+/* ------------------- */
+* { 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; 
+  background-repeat: no-repeat;
+}
+
+html, body {
+  height: 100%; 
+  font-family: 'Roboto', sans-serif; 
+  background-color: darkslategray;
+  color: rgb(230, 227, 227);
+  background-image: url('images/roller-up.png');
+  background-size: 330px;
+  background-position: center 385px;
+} 
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;  /*Too keep footer down*/
+}
+
+hr {border: white solid 1px;}
+
+.stay-down-footer {flex: 1;}
+
+/* Removing default styles */
+fieldset {border: none;}
+fieldset input {border: none;}
+button {border: none;}
+input[type=number]::-webkit-inner-spin-button {appearance: none;}
+ul {list-style-type: none;}
+a {text-decoration: none; color: white;}
+/* ------------------------ */
+/* ------------------- */
+/*-------Header--------*/
+/* ------------------- */
+header {
+  height: 200px;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+header h1 {
+  padding: 25px;
+  font-size: 35px;
+}
+
+header p {
+  font-size: 20px;
+  padding-bottom: 20px;
+}
+
+/* ------------------- */
+/*--------Form---------*/
+/* ------------------- */
+form  {
+  text-align: center; 
+  margin: 60px auto 60px auto;
+  padding-top: 20px;
+  backdrop-filter: blur(5px);
+  background-color: rgba(0, 0, 0, 0.5);
+  max-width: 500px;
+  border-radius: 30px;
+  border:rgb(55, 208, 172) solid 5px;
+}
+
+fieldset legend {
+  margin-bottom: 25px;
+  font-size: 40px;
+  color: aquamarine;
+}
+
+.label-input-container {
+  max-width: 365px;
+  margin: 20px auto;
+}
+
+fieldset label { 
+  color: rgb(224, 234, 234);
+  font-size: 27px;
+  font-weight:bold
+}
+
+fieldset input {
+  display: block;
+  margin: 20px auto 5px auto;
+  padding: 17px 10px;
+  border-radius: 40px;
+  background-color: rgb(61, 60, 60);
+  color: rgb(232, 227, 226);
+  font-size: 30px;
+  max-width: 150px;
+  outline: whitesmoke solid 2px;
+}
+
+form h3 {
+  margin: 20px;
+  color: aquamarine;
+  font-size: 25px;
+}
+#gal-calc {
+  display: block;
+  width: 70px;
+  margin: auto;
+  padding: 7px;
+  background-color: rgb(95, 92, 92);
+  color: white;
+  border-radius: 10px;
+  font-size: 26px;
+}
+
+form button {
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 28px;
+  background-color: rgb(55, 208, 172);
+  color: white;
+}
+
+/* ------------------- */
+/*--------Footer-------*/
+/* ------------------- */
+footer {
+  text-align: center; 
+  font-size: 13px;
+  color: white; 
+  background-color: rgb(37, 36, 36);
+  padding: 7px;
+  line-height: 17px;
+}
+
+footer img {
+  height: 25px; 
+  margin-top: 3px;
+}
+
+/* roller Transition */
+footer img {transition: .3s;}
+footer img:hover { filter: brightness(1.50);}
+footer a {transition: .3s;}
+footer a:focus { filter: brightness(1.50);}
+/* ----------------- */
+.copyright {font-size: 11px;}
+
+/* ------------------- */
+/*----Media---768px----*/
+/* ------------------- */
+@media (min-width: 500px) {
+  /* header */
+  header h1 {font-size: 50px;}
+  header p {font-size: 24px;}
+  /* ====== */
+
+  /*  form  */
+  .label-input-container {
+    display: flex;
+    justify-content: space-between;
+    /* flex-direction: row; */
+  }
+
+  .label-input-container input {margin-left: auto;  }
+
+  fieldset label { 
+    margin: 10px;
+    font-size: 21px;
+  }
+
+  fieldset input {
+    margin: 10px;
+    padding: 7px;
+    font-size: 22px;
+    max-width: 120px;
+  }
+  /* ====== */
+}
+
+@media (min-width: 768px) {}
+
+/* ------------------- */
+/*----Media--1900px----*/
+/* ------------------- */
+@media (min-width: 1900px) {}
