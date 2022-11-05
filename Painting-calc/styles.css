@@ -63,11 +63,12 @@ form  {
   text-align: center; 
   margin: 60px auto 60px auto;
   padding-top: 20px;
-  backdrop-filter: blur(5px);
   background-color: rgba(0, 0, 0, 0.5);
   max-width: 500px;
   border-radius: 30px;
   border:rgb(55, 208, 172) solid 5px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);  
 }
 
 fieldset legend {
@@ -96,7 +97,8 @@ fieldset input {
   color: rgb(232, 227, 226);
   font-size: 30px;
   max-width: 150px;
-  outline: whitesmoke solid 2px;
+  border: whitesmoke solid 2px;
+
 }
 
 form h3 {
