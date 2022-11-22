@@ -21,32 +21,34 @@
           <legend>Paint Calculator</legend>
           <hr>
           <div class="label-input-container">
-            <Label for="fullname">Length of walls:</Label>
-            <input type="number" class="calc-input" id="wall-length" name="wall_length" placeholder="#" required><br>
+            <Label for="wall-length">Length of walls:</Label>
+            <input type="number" class="calc-input" id="wall-length" name="wall_length" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
           </div>
           <div class="label-input-container">
-            <Label for="fullname">Height of walls:</Label> 
-            <input type="number" id="wall-height" name="wall_length" placeholder="#" required><br>
+            <Label for="wall-height">Height of walls:</Label> 
+            <input type="number" id="wall-height" name="wall_height" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
+          </div>
+
+          <div class="label-input-container">
+            <Label for="num-windows">Height of windows:</Label> 
+            <input type="number" id="num-windows" name="num_windows" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
+          </div>
+
+          <div class="label-input-container">
+            <Label for="num-doors">Number of doors:</Label>
+            <input type="number" id="num-doors" name="num_doors" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
           </div>
           <div class="label-input-container">
-            <Label for="fullname">Number of windows:</Label>
-            <input type="number" id="num-windows" name="wall_length" placeholder="#" required><br>
+            <Label for="open-length">Length of opening:</Label>
+            <input type="number" id="open-length" name="open_length" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
           </div>
           <div class="label-input-container">
-            <Label for="fullname">Number of doors:</Label>
-            <input type="number" id="num-doors" name="wall_length" placeholder="#" required><br>
-          </div>
-          <div class="label-input-container">
-            <Label for="fullname">Length of opening:</Label>
-            <input type="number" id="open-length" name="wall_length" placeholder="#" required><br>
-          </div>
-          <div class="label-input-container">
-            <Label for="fullname">Height of opening:</Label>
-            <input type="number" id="open-height" name="wall_length" placeholder="#" required><br>
+            <Label for="open-height">Height of opening:</Label>
+            <input type="number" id="open-height" name="open_height" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
           </div>   
           <div class="label-input-container">
-            <Label for="fullname">Coats of paint:</Label>
-            <input type="number" id="paint-coats" name="wall_length" placeholder="#" required><br>
+            <Label for="paint-coats">Coats of paint:</Label>
+            <input type="number" id="paint-coats" name="paint_coats" placeholder="#" min="0.0" step="0.1"oninput="validity.valid||(value='');" required><br>
           </div>  
         </fieldset>
         <hr>
