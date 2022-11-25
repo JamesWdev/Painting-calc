@@ -7,6 +7,11 @@
   padding: 0; 
   background-repeat: no-repeat;
 }
+*:focus {
+  outline: none;
+  /* border:rgb(55, 208, 172) solid 1px; */
+  box-shadow: 0 0 0 4pt rgb(55, 208, 172);
+}
 
 html, body {
   height: 100%; 
@@ -16,7 +21,7 @@ html, body {
   background-image: url('images/roller-up.png');
   background-size: 330px;
   background-position: center 385px;
-} 
+}   
 
 body {
   display: flex;
@@ -69,6 +74,7 @@ form  {
   border:rgb(55, 208, 172) solid 5px;
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);  
+  box-shadow: 0px 1px 2px rgb(0, 0, 0);
 }
 
 fieldset legend {
@@ -98,6 +104,7 @@ fieldset input {
   font-size: 30px;
   max-width: 150px;
   border: whitesmoke solid 2px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0);
 
 }
 
@@ -115,6 +122,7 @@ form h3 {
   color: white;
   border-radius: 10px;
   font-size: 26px;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0);
 }
 
 form button {
@@ -124,7 +132,18 @@ form button {
   font-size: 28px;
   background-color: rgb(55, 208, 172);
   color: white;
+  transition: .3s;
+  box-shadow: 0px 2px 4px rgb(0, 0, 0);
 }
+
+/* button transition */
+form button:hover {background-color: rgb(26, 88, 74);}
+
+form button:focus {
+  background-color: rgb(26, 88, 74);
+}
+
+/* - - - - - - - - - */
 
 /* ------------------- */
 /*--------Footer-------*/
@@ -148,7 +167,12 @@ footer img {transition: .3s;}
 footer img:hover { filter: brightness(1.50);}
 footer a {transition: .3s;}
 footer a:focus { filter: brightness(1.50);}
-/* ----------------- */
+/* - - - - - - - - - */
+/* Address Transition */
+address a {transition: .3s;}
+address a:hover {color: lightslategray;}
+/* - - - - - - - - - */
+
 .copyright {font-size: 11px;}
 
 /* ------------------- */
