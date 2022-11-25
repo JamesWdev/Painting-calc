@@ -142,8 +142,20 @@ form button:hover {background-color: rgb(26, 88, 74);}
 form button:focus {
   background-color: rgb(26, 88, 74);
 }
-
 /* - - - - - - - - - */
+
+#reset {
+  display: block;
+  text-align: center;
+  background-color: brown;
+  margin: auto;
+  margin-bottom: 20px;
+  border: 2px solid brown;
+  transition: .3s;
+}
+/* reset transition */
+#reset:hover {background-color: rgb(77, 18, 18);}
+/* - - - - - - - -  */
 
 /* ------------------- */
 /*--------Footer-------*/
