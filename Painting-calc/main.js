@@ -10,15 +10,15 @@ const coats = document.querySelector('#paint-coats');
 const calcDisplay = document.querySelector('#gal-calc');
 const submit = document.querySelector('button');
 /////////pre-calc constants
-const galPerFoot = .0236;
-const windowSpace = (5 + 5) * galPerFoot;
-const doorSpace = (8 + 3) * galPerFoot;
+const galPerFoot = .0028;
+const windowSpace = (5 * 5) * galPerFoot;
+const doorSpace = (8 * 3) * galPerFoot;
 
 ////////Final calc function
 function submitClick() {
   const wallL = +wallLengthInput.value;
   const wallH = +wallHeightInput.value;
-  const wallTotal = (wallL + wallH ) * galPerFoot;
+  const wallTotal = (wallL * wallH ) * galPerFoot;
   console.log('Total of paint for walls: ' + wallTotal)
 
   const DoorWindowTotal = (+numWindows.value * windowSpace) + (+numDoors.value * doorSpace)
@@ -26,7 +26,7 @@ function submitClick() {
 
   const openL = +openLength.value;
   const openW = +openHeight.value;
-  const openTotal = (openL + openW) * galPerFoot;
+  const openTotal = (openL * openW) * galPerFoot;
   console.log('Total open space to remove: ' + openTotal)
 
   let coatsIn = +coats.value;
@@ -57,14 +57,3 @@ function noDecimal() {
     document.activeElement.value = Math.floor((+document.activeElement.value));
   } 
 }
-
-
-
-
-
-
-
-
-
-
-
