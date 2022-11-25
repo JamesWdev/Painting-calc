@@ -52,11 +52,13 @@
             <Label for="paint-coats">Coats of paint:</Label>
             <input type="number" id="paint-coats" name="paint_coats" placeholder="#" min="0" step="1" oninput="noDecimal(zeroTrim(this.value))" required><br>
           </div>  
+          <input type="reset" placeholder="reset" id="reset">
         </fieldset>
         <hr>
         <h3>Total Gallons needed: </h3>
         <span id="gal-calc">##</span>
         <button type="button">Submit</button>
+        
       </form>
       
     </main>
