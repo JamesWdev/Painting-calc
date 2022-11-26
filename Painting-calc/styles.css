@@ -106,6 +106,7 @@ fieldset input {
   max-width: 150px;
   border: whitesmoke solid 2px;
   box-shadow: 0px 2px 4px rgb(0, 0, 0);
+  text-align: center;
 
 }
 
@@ -191,7 +192,7 @@ address a:hover {color: lightslategray;}
 .copyright {font-size: 11px;}
 
 /* ------------------- */
-/*----Media---768px----*/
+/*----Media---500px----*/
 /* ------------------- */
 @media (min-width: 500px) {
   /* header */
@@ -206,7 +207,10 @@ address a:hover {color: lightslategray;}
     /* flex-direction: row; */
   }
 
-  .label-input-container input {margin-left: auto;  }
+  .label-input-container input {
+    margin-left: auto;
+    text-align: left;
+  }
 
   fieldset label { 
     margin: 10px;
@@ -222,9 +226,4 @@ address a:hover {color: lightslategray;}
   /* ====== */
 }
 
-@media (min-width: 768px) {}
 
-/* ------------------- */
-/*----Media--1900px----*/
-/* ------------------- */
-@media (min-width: 1900px) {}
