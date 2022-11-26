@@ -40,20 +40,25 @@
             <Label for="num-doors">Number of doors:</Label>
             <input type="number" id="num-doors" name="num_doors" placeholder="#" min="0" step="1" oninput="noDecimal(zeroTrim(this.value))" required><br>
           </div>
+          
           <div class="label-input-container">
             <Label for="open-length">Length of opening:</Label>
             <input type="number" id="open-length" name="open_length" placeholder="ft" min="0.0" step="0.1" oninput="oneDecimal(zeroTrim(this.value))" required><br>
           </div>
+          
           <div class="label-input-container">
             <Label for="open-height">Height of opening:</Label>
             <input type="number" id="open-height" name="open_height" placeholder="ft" min="0.0" step="0.1" oninput="oneDecimal(zeroTrim(this.value))" required><br>
-          </div>   
+          </div> 
+          
           <div class="label-input-container">
             <Label for="paint-coats">Coats of paint:</Label>
             <input type="number" id="paint-coats" name="paint_coats" placeholder="#" min="0" step="1" oninput="noDecimal(zeroTrim(this.value))" required><br>
           </div>  
+          
           <input type="reset" placeholder="reset" id="reset" onclick="calcDisplay.textContent = '##';">
         </fieldset>
+        
         <hr>
         <h3>Total Gallons needed: </h3>
         <span id="gal-calc">##</span>
