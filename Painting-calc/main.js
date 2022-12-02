@@ -45,15 +45,18 @@ submit.addEventListener('click', submitClick)
 
 ////////input restrictions
 function zeroTrim(){
-  if (+document.activeElement.value <= 0) {document.activeElement.value = ''}
+  if (+document.activeElement.value == 0) {document.activeElement.value = ''}
+  if (+document.activeElement.value < 0) {document.activeElement.value = document.activeElement.value * -1}
 }
 function oneDecimal(x) {
   if (!Number.isInteger(+document.activeElement.value)) {
     document.activeElement.value = Math.floor((+document.activeElement.value * 10))/10;
+    zeroTrim();
   } 
 }
 function noDecimal() {
   if (!Number.isInteger(+document.activeElement.value)) {
     document.activeElement.value = Math.floor((+document.activeElement.value));
+    zeroTrim();
   } 
 }
