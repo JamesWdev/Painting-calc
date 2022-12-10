@@ -43,20 +43,63 @@ function submitClick() {
 }
 submit.addEventListener('click', submitClick)
 
-////////input restrictions
-function zeroTrim(){
-  if (+document.activeElement.value == 0) {document.activeElement.value = ''}
-  if (+document.activeElement.value < 0) {document.activeElement.value = document.activeElement.value * -1}
+/////////Validation for one decimal inputs
+const regex = /(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)/g;
+// const regex = /((\d*\.?)|(\d*\.\d)|(\.\d)|(\.))/g;
+function charRemove(s) {
+  const str = s;
+  let filter1 = str.match(regex);
+  console.log('Regex Filter: ' + filter1);
+  let filter2 = filter1.join('');
+  console.log('Joined together: ' + filter2);
+  let charArray = filter2.split('');
+  console.log(charArray);
+  let periodCount = 0;
+
+  for(let i = 0; i < charArray.length; i++){
+    if (charArray[i] === '.'){periodCount++};
+    if (charArray[i] === '.' && periodCount > 1){charArray[i] = '';}
+  }
+
+  let onePeriodArray= charArray.join('');
+  if (onePeriodArray === ''){
+    return onePeriodArray
+  } else {
+  let oneDecimal = Math.floor(+onePeriodArray * 10)/10;
+  console.log('One decimal filter: ' + oneDecimal);
+  return oneDecimal;
+  }
 }
-function oneDecimal(x) {
-  if (!Number.isInteger(+document.activeElement.value)) {
-    document.activeElement.value = Math.floor((+document.activeElement.value * 10))/10;
-    zeroTrim();
-  } 
+//////////Validation for int only inputs
+const regexIntOnly = /\d*/g;
+function charRemoveInt(s) {
+  const str = s;
+
+  let reFilter = str.match(regexIntOnly);
+  console.log(reFilter);
+  let joinArray = reFilter.join('');
+  console.log(joinArray);
+
+  if(joinArray === ''){return joinArray}
+  return Math.floor(+joinArray);
 }
-function noDecimal() {
-  if (!Number.isInteger(+document.activeElement.value)) {
-    document.activeElement.value = Math.floor((+document.activeElement.value));
-    zeroTrim();
-  } 
+
+/////////Arrow key functionality
+function arrowToggle(){
+  if (window.event.key === 'ArrowUp'){
+    if (document.activeElement.value === '.'){document.activeElement.value = 0;}
+    document.activeElement.value = (+document.activeElement.value + .1).toFixed(1);
+  }
+  if (window.event.key === 'ArrowDown' && +document.activeElement.value >= .1){
+    document.activeElement.value = (+document.activeElement.value - .1).toFixed(1);
+  }
+}
+function arrowToggleInt(){
+  if (window.event.key === 'ArrowUp'){
+    if (document.activeElement.value === '.'){document.activeElement.value = 0;}
+    document.activeElement.value = +document.activeElement.value + 1;
+  }
+  if (window.event.key === 'ArrowDown' && +document.activeElement.value >= 1){
+    document.activeElement.value = +document.activeElement.value - 1;
+  }
 }
