@@ -25,11 +25,10 @@
             <Label for="wall-length">Length of walls:</Label>
             <input type="text" class="calc-input" id="wall-length" name="wall_length" placeholder="ft"
             pattern="^(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)$"
-            oninput="validity.valid || (value = charRemove(value));
-            
+            oninput="validity.valid || (value = charRemove(value));            
             validity.valid || (value = '');"
             onkeydown="arrowToggle(); console.log(value); validity.valid || (value = '');"            
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div>
 
           <div class="label-input-container">
@@ -39,7 +38,7 @@
             oninput="validity.valid || (value = charRemove(value));
             validity.valid || (value = '');"
             onkeydown="arrowToggle(); console.log(value); validity.valid || (value = '');"            
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div>
 
           <div class="label-input-container">
@@ -48,41 +47,43 @@
              pattern="^0|([1-9]\d*)$"
              oninput="validity.valid || (value = charRemoveInt(value));validity.valid || (value = '');"
              onkeydown=" arrowToggleInt(); validity.valid || (value = '');"
-             inputmode="numeric"><br>
+             inputmode="decimal"><br>
           </div>
 
           <div class="label-input-container">
             <Label for="num-doors">Number of doors:</Label>
-            <input type="text" id="num-doors" name="num_doors" placeholder="#"              pattern="^0|([1-9]\d*)$"
+            <input type="text" id="num-doors" name="num_doors" placeholder="#" pattern="^0|([1-9]\d*)$"
             oninput="validity.valid || (value = charRemoveInt(value));validity.valid || (value = '');"
             onkeydown=" arrowToggleInt(); validity.valid || (value = '');"
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div>
           
           <div class="label-input-container">
             <Label for="open-length">Length of opening:</Label>
-            <input type="text" id="open-length" name="open_length" placeholder="ft"             pattern="^(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)$"
+            <input type="text" id="open-length" name="open_length" placeholder="ft" 
+            pattern="^(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)$"
             oninput="validity.valid || (value = charRemove(value));
             validity.valid || (value = '');"
             onkeydown="arrowToggle(); console.log(value); validity.valid || (value = '');"            
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div>
           
           <div class="label-input-container">
             <Label for="open-height">Height of opening:</Label>
-            <input type="text" id="open-height" name="open_height" placeholder="ft"             pattern="^(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)$"
+            <input type="text" id="open-height" name="open_height" placeholder="ft" 
+            pattern="^(0\.\d)|([1-9]+\d*\.?\d?)|((0|[1-9])(\.|\.\d)?)|(\.?\d?)$"
             oninput="validity.valid || (value = charRemove(value));
             validity.valid || (value = '');"
             onkeydown="arrowToggle(); console.log(value); validity.valid || (value = '');"            
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div> 
           
           <div class="label-input-container">
             <Label for="paint-coats">Coats of paint:</Label>
-            <input type="text" id="paint-coats" name="paint_coats" placeholder="#"              pattern="^0|([1-9]\d*)$"
+            <input type="text" id="paint-coats" name="paint_coats" placeholder="#" pattern="^0|([1-9]\d*)$"
             oninput="validity.valid || (value = charRemoveInt(value));validity.valid || (value = '');"
             onkeydown=" arrowToggleInt(); validity.valid || (value = '');"
-            inputmode="numeric"><br>
+            inputmode="decimal"><br>
           </div>  
           
           <input type="reset" placeholder="reset" id="reset" onclick="calcDisplay.textContent = '##';">
